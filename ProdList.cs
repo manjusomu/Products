@@ -28,6 +28,25 @@ namespace ConsoleAppProduct
                 Console.WriteLine($"{i}\t{prodlist[i].PName}\t{prodlist[i].Pprice}\t{prodlist[i].MfDate}\t{prodlist[i].ExpDate}");
 
         }
-        
+        public void Product2()
+        {
+
+
+            List<Products> prodlist = new List<Products>()
+                {
+                new Products() { PName = "Facewash", Pprice = 150, MfDate = new DateTime(day: 15, month: 7, year: 2023), ExpDate = new DateTime(day: 17, month: 10, year: 2024) },
+                new Products(){PName="Aloveragel" ,Pprice=95,MfDate=new DateTime(day:05,month:06,year:2021),ExpDate=new DateTime(day:07,month:01,year:2022)},
+               new Products(){PName="dishwasher" ,Pprice=450,MfDate=new DateTime(day:02,month:08,year:2021),ExpDate=new DateTime(day:03,month:09,year:2023)}
+
+
+
+            };
+            prodlist.Sort((p1, p2) => p1.PName.CompareTo(p2.PName));
+            for (int i = 0; i < prodlist.Count; i++)
+                Console.WriteLine($"{i}\t{prodlist[i].PName}\t{prodlist[i].Pprice}\t{prodlist[i].MfDate}\t{prodlist[i].ExpDate}");
+
+        }
+
+
     }
 }
